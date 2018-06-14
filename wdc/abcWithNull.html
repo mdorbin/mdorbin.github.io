@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>ABC Table</title>
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://connectors.tableau.com/libs/tableauwdc-2.0.latest.js" type="text/javascript"></script>
+    <script>
+(function() {
+    // Create the connector object
+    var myConnector = tableau.makeConnector();
+
+    // Define the schema
+    myConnector.getSchema = function(schemaCallback) {
+        schemaCallback([{
+            id: "threeColumnSchema",
+            description: "A schema with three columns",
+            columns: [{
+                         id: "a",
+                         description: "A color string",
+                         dataType: tableau.dataTypeEnum.string
+                     },
+                     {
+                         id: "b",
+                         description: "A number",
+                         dataType: tableau.dataTypeEnum.int
+                     },
+                     {
+                         id: "c",
+                         description: "Another number",
+                         dataType: tableau.dataTypeEnum.int
+                     }]
+        }]);
+    };
+
+    // Download the data
+    myConnector.getData = function(table, doneCallback) {
+        table.appendRows([{"a": "red", "b": 2, "c": 3},
+                          {"a": "red", "b": 3, "c": 4},
+                          {"a": "yellow", "b": 1, "c": 4},
+                          {"a": "green", "b": 3, "c": 1},
+			  {"a": "purple", "b": null, "c", null]);
+        doneCallback();
+    };
+
+    tableau.registerConnector(myConnector);
+
+    // Create event listeners for when the user submits the form
+    $(document).ready(function() {
+        setTimeout(tableau.submit, 500);
+    });
+})();
+    </script>
+</head>
+</html>
