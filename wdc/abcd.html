@@ -39,13 +39,13 @@
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        table.appendRows([{"a": "red", "b": "north", "c": 3, "d": 5},
-                          {"a": "red", "b": "south", "c": 4, "d": 1},
-                          {"a": "red", "b": "south", "c": 500, "d": 12},
-                          {"a": "yellow", "b": "north", "c": 4, "d": 3},
-                          {"a": "yellow", "b": "south", "c": 6, "d": 3},
-                          {"a": "green", "b": "north", "c": 1, "d": 5},
-                          {"a": "green", "b": "south", "c": 3, "d": 7}]);
+        table.appendRows([{"color": "red", "direction": "north", "number1": 3, "number2": 5},
+                          {"color": "red", "direction": "south", "number1": 4, "number2": 1},
+                          {"color": "red", "direction": "south", "number1": 500, "number2": 12},
+                          {"color": "yellow", "direction": "north", "number1": 4, "number2": 3},
+                          {"color": "yellow", "direction": "south", "number1": 6, "number2": 3},
+                          {"color": "green", "direction": "north", "number1": 1, "number2": 5},
+                          {"color": "green", "direction": "south", "number1": 3, "number2": 7}]);
         doneCallback();
     };
 
