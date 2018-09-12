@@ -15,8 +15,8 @@
             id: "numberSchema",
             description: "A schema with a number",
             columns: [{
-                         id: "name not content url",
-                         description: "The number nine, but with a weird name",
+                         id: "nine",
+                         description: "The number nine",
                          dataType: tableau.dataTypeEnum.int
                      }]
         }]);
@@ -24,7 +24,7 @@
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        table.appendRows([{"name not content url": 9}]);
+        table.appendRows([{"nine": 9}]);
         doneCallback();
     };
 
