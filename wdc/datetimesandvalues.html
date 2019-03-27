@@ -19,7 +19,7 @@
                          description: "A datetime",
                          dataType: tableau.dataTypeEnum.datetime
                      },
-{
+                     {
                          id: "a",
                          description: "A color string",
                          dataType: tableau.dataTypeEnum.string
@@ -39,10 +39,20 @@
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        table.appendRows([{"datetime": "01/01/2019 00:00:00", "a": "red", "b": 2, "c": 3},
-                          {"datetime": "01/01/2019 00:30:00", "a": "red", "b": 3, "c": 4},
-                          {"datetime": "01/02/2019 00:00:00", "a": "yellow", "b": 1, "c": 4},
-                          {"datetime": "02/01/2019 00:00:00", "a": "green", "b": 3, "c": 1}]);
+        table.appendRows([{"datetime": "12/31/2017 12:59:59", "a": "red", "b": 2, "c": 3},
+            {"datetime": "01/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
+            {"datetime": "02/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
+            {"datetime": "05/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
+            {"datetime": "08/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
+            {"datetime": "10/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
+            {"datetime": "11/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
+            {"datetime": "12/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
+            {"datetime": "03/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
+            {"datetime": "01/01/2019 00:00:00", "a": "red", "b": 2, "c": 3},
+            {"datetime": "01/01/2019 00:00:00", "a": "red", "b": 2, "c": 3},
+            {"datetime": "01/01/2019 00:30:00", "a": "red", "b": 3, "c": 4},
+            {"datetime": "01/02/2019 00:00:00", "a": "yellow", "b": 1, "c": 4},
+            {"datetime": "02/01/2019 00:00:00", "a": "green", "b": 3, "c": 1}]);
         doneCallback();
     };
 
