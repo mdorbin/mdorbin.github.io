@@ -33,27 +33,32 @@
                          id: "c",
                          description: "Another number",
                          dataType: tableau.dataTypeEnum.int
+                     },
+                     {
+                         id: "d",
+                         description: "A float number",
+                         dataType: tableau.dataTypeEnum.float
                      }]
         }]);
     };
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        table.appendRows([{"datetime": "12/31/2016 12:59:59", "a": "red", "b": 2, "c": 3},
-            {"datetime": "12/31/2016 12:59:59", "a": "red", "b": 2, "c": 3},
-            {"datetime": "01/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
-            {"datetime": "02/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
-            {"datetime": "05/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
-            {"datetime": "08/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
-            {"datetime": "10/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
-            {"datetime": "11/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
-            {"datetime": "12/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
-            {"datetime": "03/01/2018 00:00:00", "a": "red", "b": 2, "c": 3},
-            {"datetime": "01/01/2019 00:00:00", "a": "red", "b": 2, "c": 3},
-            {"datetime": "01/01/2019 00:00:00", "a": "red", "b": 2, "c": 3},
-            {"datetime": "01/01/2019 00:30:00", "a": "red", "b": 3, "c": 4},
-            {"datetime": "01/02/2019 00:00:00", "a": "yellow", "b": 1, "c": 4},
-            {"datetime": "02/01/2019 00:00:00", "a": "green", "b": 3, "c": 1}]);
+        table.appendRows([{"datetime": "12/31/2016 12:59:59", "a": "red", "b": 2, "c": 3, "d": 0.5},
+            {"datetime": "12/31/2016 12:59:59", "a": "red", "b": 2, "c": 3, "d": 1.0},
+            {"datetime": "01/01/2018 00:00:00", "a": "red", "b": 2, "c": 3, "d": 0.7},
+            {"datetime": "02/01/2018 00:00:00", "a": "red", "b": 2, "c": 3, "d": 0.6},
+            {"datetime": "05/01/2018 00:00:00", "a": "red", "b": 2, "c": 3, "d": 0.5},
+            {"datetime": "08/01/2018 00:00:00", "a": "red", "b": 2, "c": 3, "d": 1.2},
+            {"datetime": "10/01/2018 00:00:00", "a": "red", "b": 2, "c": 3, "d": 1.4},
+            {"datetime": "11/01/2018 00:00:00", "a": "red", "b": 2, "c": 3, "d": 1.7},
+            {"datetime": "12/01/2018 00:00:00", "a": "red", "b": 2, "c": 3, "d": 2.3},
+            {"datetime": "03/01/2018 00:00:00", "a": "red", "b": 2, "c": 3, "d": 4.7},
+            {"datetime": "01/01/2019 00:00:00", "a": "red", "b": 2, "c": 3, "d": 4.9},
+            {"datetime": "01/01/2019 00:00:00", "a": "red", "b": 2, "c": 3, "d": 5.3},
+            {"datetime": "01/01/2019 00:30:00", "a": "red", "b": 3, "c": 4, "d": 5.5},
+            {"datetime": "01/02/2019 00:00:00", "a": "yellow", "b": 1, "c": 4, "d": 7.7},
+            {"datetime": "02/01/2019 00:00:00", "a": "green", "b": 3, "c": 1, "d": 8.9}]);
         doneCallback();
     };
 
