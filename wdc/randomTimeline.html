@@ -37,11 +37,14 @@
         // Download the data
         myConnector.getData = function(table, doneCallback) {
           var number = Math.random();
+          var secondNumber = Math.random();
+          var thirdNumber = Math.random();
+          var fourthNumber = Math.random();
 
           table.appendRows([{"datetime": "1/1/2016 00:00:00", "random": Math.floor(number * 1000), "random_double": number},
-                            {"datetime": "1/1/2017 00:00:00", "random": Math.floor(number * 1000), "random_double": number},
-                            {"datetime": "1/1/2018 00:00:00", "random": Math.floor(number * 1000), "random_double": number},
-                            {"datetime": "1/1/2019 00:00:00", "random": Math.floor(number * 1000), "random_double": number}]);
+                            {"datetime": "1/1/2017 00:00:00", "random": Math.floor(secondNumber * 1000), "random_double": secondNumber},
+                            {"datetime": "1/1/2018 00:00:00", "random": Math.floor(thirdNumber * 1000), "random_double": thirdNumber},
+                            {"datetime": "1/1/2019 00:00:00", "random": Math.floor(fourthNumber * 1000), "random_double": fourthNumber}]);
           doneCallback();
         };
         tableau.registerConnector(myConnector);
